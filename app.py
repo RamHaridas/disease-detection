@@ -18,7 +18,7 @@ api = Api(app)
 
 
 #add api endpoints here
-api.add_resource(DiseaseResource,'/detect')
+api.add_resource(DiseaseResource,'/detect')  
 
 
 

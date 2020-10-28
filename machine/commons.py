@@ -36,12 +36,13 @@ class classifier(nn.Module):
 
 
 def get_model():
-    checkpoint_path='xray_projectV4_2_densenet161_mila.pt'
-    model=models.densenet161(pretrained=True)
-    model.classifier = classifier()
-    model.load_state_dict(torch.load(checkpoint_path,map_location='cpu'),strict=False)
-    model.eval()
-    return model
+    pass
+    #checkpoint_path='xray_projectV4_2_densenet161_mila.pt'
+    #model=models.densenet161(pretrained=True)
+    #model.classifier = classifier()
+    #model.load_state_dict(torch.load(checkpoint_path,map_location='cpu'),strict=False)
+    #model.eval()
+    #return model
 
 def get_tensor(image_bytes):
 	my_transforms=transforms.Compose([transforms.Resize(224),transforms.ToTensor()])
