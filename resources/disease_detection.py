@@ -25,6 +25,7 @@ class DiseaseResource(Resource):
         except:
             return {'message':'failed'}
 
+
     #detects covid 19 postitive or not
     def put(self):
         file = request.files['file']
