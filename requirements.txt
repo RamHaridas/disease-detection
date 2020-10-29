@@ -7,8 +7,8 @@ Flask-Script
 alembic
 uwsgi
 psycopg2
-torch==1.0.0
-torchvision==0.2.1
+#torch==1.0.0
+#torchvision==0.2.1
 numpy
 Pillow==5.4.1
 gunicorn==19.9.0
