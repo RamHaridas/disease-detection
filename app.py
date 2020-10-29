@@ -1,5 +1,4 @@
-#from flask import Flask
-import Flask
+from flask import Flask
 from flask_restful import Api
 from flask_migrate import Migrate,MigrateCommand
 from flask_script import Manager
