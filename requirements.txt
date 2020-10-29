@@ -9,6 +9,10 @@ uwsgi
 psycopg2
 torch==1.0.0
 torchvision==0.2.1
-numpy==1.15.4
-Pillow==6.2.0
+numpy
+Pillow==5.4.1
 gunicorn==19.9.0
+Keras==2.3.1
+scikit-learn==0.20.2
+tensorflow==2.2.0
+matplotlib==3.0.2

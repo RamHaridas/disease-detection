@@ -1,7 +1,6 @@
 from flask.globals import request
 from flask import jsonify
 from h5py._hl.files import File
-from machine.inference import get_disease_name
 from machine.covid19 import COVID
 from flask_restful import Resource,reqparse
 import io
@@ -15,15 +14,7 @@ class DiseaseResource(Resource):
 
     #not working (model not available)
     def post(self):
-        file = request.files['file']
-        if file is None:
-            return {'message':'please add an image file'}
-        try:
-            image = file.read()
-            disease_name=get_disease_name(image_bytes=image)
-            return {'message':disease_name}	
-        except:
-            return {'message':'failed'}
+        return {'message':'under deverlopment'}
 
 
     #detects covid 19 postitive or not
