@@ -20,6 +20,10 @@ api = Api(app)
 #add api endpoints here
 api.add_resource(DiseaseResource,'/detect')  
 
+@app.route('/lol')
+def check():
+    return "WORKING 786"
+
 
 
 if __name__ == '__main__':
