@@ -13,7 +13,7 @@ class DiseaseResource(Resource):
     parser = reqparse.RequestParser()
 
     #not working (model not available)
-    def post(self):
+    def get(self):
         return {'message':'under deverlopment'}
 
 
