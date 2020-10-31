@@ -48,8 +48,8 @@ class DiseaseResource(Resource):
     
     def post(self):
         file = request.files['file']
-
-        return send_file(BytesIO(file.read()),as_attachment=True,attachment_filename=file.filename)
+        
+        return send_file(BytesIO(file.read()),as_attachment=False,attachment_filename=file.filename)
 
 
         
