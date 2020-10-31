@@ -28,7 +28,7 @@ class DiseaseResource(Resource):
         dataBytesIO = io.BytesIO(file.read())
         dataBytesIO.seek(0)
         image = Image.open(file)
-
+        
         test_image = c.preprocess(image)
         
         prediction = c.model.predict(test_image)
