@@ -16,7 +16,7 @@ class COVID:
     
     def preprocess(self,img):
         
-        img = np.expand_dims(img, axis=0)
+        #img = np.expand_dims(img, axis=0)
         img = np.array(img)
 
         if(img.ndim == 3):
