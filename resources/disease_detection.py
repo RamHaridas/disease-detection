@@ -1,3 +1,4 @@
+from io import BytesIO
 from os import name
 from flask.globals import request
 from flask import jsonify, send_file
@@ -47,8 +48,8 @@ class DiseaseResource(Resource):
     
     def post(self):
         file = request.files['file']
-        
-        return send_file(filename_or_fp=file,as_attachment=False,attachment_filename=file.filename)
+
+        return send_file(BytesIO(file.read()),as_attachment=True,attachment_filename=file.filename)
 
 
         
