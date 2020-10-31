@@ -8,6 +8,7 @@ from flask_restful import Resource,reqparse
 import io
 from PIL import Image
 import numpy as np
+from models.covid_data import CoivdModel
 
 
 
@@ -16,7 +17,7 @@ class DiseaseResource(Resource):
 
     #not working (model not available)
     def get(self):
-        return {'message':'under deverlopment'}
+        return {'results':[c.josn() for c in CoivdModel.query.all()]}
 
 
     #detects covid 19 postitive or not
@@ -39,11 +40,13 @@ class DiseaseResource(Resource):
 
         label = c.label_dict[result]
 
+        covid = CoivdModel(label,accuracy)
+        covid.save()
         #print(prediction,result,accuracy)
 
         #response = {'prediction': {'result': label,'accuracy': accuracy}}
 
-        return {'result':label,"accuracy":accuracy}
+        return {'saved':'image saved successfully'}
 
     
     def post(self):
