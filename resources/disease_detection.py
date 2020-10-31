@@ -39,7 +39,7 @@ class DiseaseResource(Resource):
 
         #print(prediction,result,accuracy)
 
-        response = {'prediction': {'result': label,'accuracy': accuracy}}
+        #response = {'prediction': {'result': label,'accuracy': accuracy}}
 
-        return jsonify(response)
+        return {'result':label,"accuracy":accuracy}
 
