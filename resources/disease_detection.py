@@ -1,5 +1,6 @@
+from os import name
 from flask.globals import request
-from flask import jsonify
+from flask import jsonify, send_file
 from h5py._hl.files import File
 from machine.covid19 import COVID
 from flask_restful import Resource,reqparse
@@ -42,4 +43,13 @@ class DiseaseResource(Resource):
         #response = {'prediction': {'result': label,'accuracy': accuracy}}
 
         return {'result':label,"accuracy":accuracy}
+
+    
+    def post(self):
+        file = request.files['file']
+        
+        return send_file(filename_or_fp=file,as_attachment=False,attachment_filename=file.filename)
+
+
+        
 
