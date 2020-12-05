@@ -6,7 +6,7 @@ from numpy.lib.function_base import select
 
 
 class COVID:
-    model = load_model('/var/www/html/disease-rest/models_ml/model-015.model')
+    model = load_model('models_ml/model-015.model')
     label_dict = {0:'Covid19 Negative', 1:'Covid19 Positive'}
     img_size = 100
 
